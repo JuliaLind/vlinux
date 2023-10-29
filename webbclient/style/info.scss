@@ -1,0 +1,63 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.help-container {
+    background-color: rgb(252, 252, 132);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 1rem 2rem;
+    width: clamp(400px, 100%, 600px);
+    transition: opacity 0.75s, visibility 0.75s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.formselector-container {
+    display: flex;
+    flex-direction: row;
+    gap: $magic-number;
+    padding: $magic-number;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.info-btn {
+    font-size: $magic-number * 1.5;
+    color: $pink3;
+    cursor: pointer;
+}
+
+.main-menu {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 1rem;
+    display: flex;
+    border: 1px solid $pink3;
+    color: $pink3;
+    padding-right: $magic-number;
+    padding-left: $magic-number;
+}
+
+.main-menu:focus {
+    outline: 2px solid $pink3;
+}

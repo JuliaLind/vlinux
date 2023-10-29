@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    width: clamp(400px, 80%, 1000px);
+    margin: $magic-number auto;
+}
+
+tr {
+    border-bottom: 1px solid $green1;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+}
+
+
+thead tr {
+    background-color: $green1;
+    color: $white;
+    text-transform: uppercase;
+}
+
+th,
+td {
+    padding: 0.5 * $magic-number;
+    min-height: 0.5 * $magic-number + $base-font-size;
+}
+
+tr {
+    height: 3rem;
+}

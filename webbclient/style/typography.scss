@@ -1,0 +1,16 @@
+html,
+body {
+    size: 110%;
+}
+
+body {
+    font-size: $base-font-size;
+    line-height: $line-height;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.result-count {
+    color: $pink3;
+    text-align: center;
+    font-size: $base-font-size * 1.25;
+}
