@@ -49,6 +49,26 @@ function createElement(hyperscript, attributes={}, options={}) {
 }
 
 /**
+ * FOr "Filling out" small resultset with extra rows in table body
+ * @param {HTMLElement} tableBody 
+ * @param {number} extraRows number of empty rows to add to table body
+ * @param {number} columns number of columns in a row
+ */
+function addMoreRows(tableBody, extraRows, columns) {
+    while (extraRows > 0) {
+        const tRow = createElement("tr");
+
+        for (let i=1; i<=columns; i++) {
+            const tCell = createElement("td");
+
+            tRow.appendChild(tCell);
+        }
+        extraRows--;
+        tableBody.appendChild(tRow);
+    }
+}
+
+/**
  * Replaces table content with the result from
  * latest server-query. Adds additional empty rows if the
  * result contains less than 10 items for a nicer look
@@ -78,17 +98,7 @@ function displayResult(resultArr, tableBody) {
     if (resultArr.length < 10) {
         let extraRows = 10 - resultArr.length;
 
-        while (extraRows > 0) {
-            const tRow = createElement("tr");
-
-            for (let i=1; i<=5; i++) {
-                const tCell = createElement("td");
-
-                tRow.appendChild(tCell);
-            }
-            extraRows--;
-            tableBody.appendChild(tRow);
-        }
+        addMoreRows(tableBody, extraRows, 5);
     }
     loader.hide();
 }
