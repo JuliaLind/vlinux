@@ -1,3 +1,5 @@
+
+/** global: CustomEvent */
 import loader from "./loader.js";
 
 /**
