@@ -55,7 +55,8 @@ function createElement(hyperscript, attributes={}, options={}) {
  * @param {number} columns number of columns in a row
  */
 function addMoreRows(tableBody, extraRows, columns) {
-    while (extraRows > 0) {
+    let newRows = extraRows
+    while (newRows > 0) {
         const tRow = createElement("tr");
 
         for (let i=1; i<=columns; i++) {
@@ -63,7 +64,7 @@ function addMoreRows(tableBody, extraRows, columns) {
 
             tRow.appendChild(tCell);
         }
-        extraRows--;
+        newRows--;
         tableBody.appendChild(tRow);
     }
 }
