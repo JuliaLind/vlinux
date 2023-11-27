@@ -1,3 +1,6 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JuliaLind/vlinux/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/JuliaLind/vlinux/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/JuliaLind/vlinux/badges/build.png?b=main)](https://scrutinizer-ci.com/g/JuliaLind/vlinux/build-status/main)
+
 # vlinux
 My final project in the course Vlinux ht23.
 
